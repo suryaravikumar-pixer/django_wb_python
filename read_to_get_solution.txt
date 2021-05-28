@@ -1,0 +1,13 @@
+In respnose/home.html  paage 1.More_info and templates are the hyper links
+    if your make them work successfully create a hyper link in side the homt.html
+
+logic:: is  <a {% url 'base' %}> templates</a> ## what ever the name should same inside the '' in report/urls.py and report/home.html
+    , the 'base' is avaiale in the report/urls.py. 
+        this is the best way to route the urls inside the html paage
+
+*****************************************************************************
+suppose if you want make a button as hyperlink inside report/home.html and that 
+redirects to the respnose/more_info.html page.
+
+create a urls.py file in the respnose app.
+you can handle views, urls and templates inside the respnose app,
