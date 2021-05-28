@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'report/base.html' %}
 
+{% block title %}
+<title>Home-view</title>
+{% endblock %}
+
+{% block content %}
     <!-- first try the this for items inside the context -->
     <!-- <h1>{{ items }}</h1> -->
     <!-- for iterate the over the loop -->
-    <!-- <h1>
-        {% for item in items %}
+    <!-- <h1> -->
+        <!-- {% for item in items %}
             <h1>{{ item.phone }}</h1>
             <h1>{{ item.price }}</h1>
             <h1>{{ item.screen }}</h1>
-        {% endfor %}
-    </h1> -->
+        {% endfor %} -->
+    <!-- </h1> -->
     <!-- then try this table  for styling the output for the items -->
     <!-- here we are using the bootstrap syntax for styling the table  -->
     <table class="table table-hover table-dark">
@@ -38,8 +35,11 @@
             <td>{{ item.screen }}</td>
             <td>{{ item.price }}</td>
             <td>
-                <button><a href="{% url 'more_info' %}">More info</a></button>
-                <button>Buy this </button>
+                <!-- <button><a href="{% url 'more_info' %}">this btn dir us to reponse/more_info.html</a></button> -->
+                <!-- <button></button>
+                <button>Buy this </button> -->
+                <button type="button" class="btn btn-secondary" ><a href="{% url 'more_info' %}">More info</a></button>
+                <button type="button" class="btn btn-success">Buy This</button>
             </td>
 
         </tr>
@@ -50,7 +50,8 @@
     <!-- {{ phone }} -->
 
     <!-- if you want to go visti other page, use "name" value which is located at url.py(app) & put inside the jinja tags  -->
-    <h1>This is my first django <a href="{% url 'base' %}">template</a></h1> 
+    <!-- jinja templates  -->
+    <h1>This is my first django template <a href="x>click for more info</a></h1> 
         <p>Functions written in PL/pgSQL can accept as arguments any scalar or array data type supported by the server, and they can return a result of any of these types. They can also accept or return any composite type (row type) specified by name. It is also possible to declare a PL/pgSQL function as returning record, which means that the result is a row type whose columns are determined by specification in the calling query, as discussed in Section 7.2.1.4.
 
         PL/pgSQL functions can be declared to accept a variable number of arguments by using the VARIADIC marker. This works exactly the same way as for SQL functions, as discussed in Section 35.4.5.
@@ -60,5 +61,5 @@
         PL/pgSQL functions can also be declared to return a "set" (or table) of any data type that can be returned as a single instance. Such a function generates its output by executing RETURN NEXT for each desired element of the result set, or by using RETURN QUERY to output the result of evaluating a query.
         
         Finally, a PL/pgSQL function can be declared to return void if it has no useful return value.</p>
-</body>
-</html>
+
+{% endblock content %}

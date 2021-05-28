@@ -11,3 +11,21 @@ redirects to the respnose/more_info.html page.
 
 create a urls.py file in the respnose app.
 you can handle views, urls and templates inside the respnose app,
+
+
+project: django-admin startproject mysite(projectname)
+
+if you want start app use cmnd in terminal:
+
+python manage.py startapp report
+after creating a app(respnose) must register in settings at installed apps.
+
+
+create a template inside the respnose(respnose/more_info.html)
+
+report::::::::::::::::::::::::::::::::::
+home.html , create a hyper link to a button(more_info),
+create a response/urls.py <----> response/views.py <-----> response/more_info.html
+
+
+template inheritance 
